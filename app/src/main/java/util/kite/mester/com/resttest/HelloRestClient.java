@@ -13,7 +13,9 @@ public class HelloRestClient {
 
     private static HelloAPI HELLO_REST_CLIENT;
     private static String ROOT="http://192.168.86.1:8080/RestP2-1.0-SNAPSHOT/webresources/generic/";
-    private static String openRoot="http://szervizserv-tabletek.rhcloud.com/RestP1-1.0-SNAPSHOT/webresources/generic/";
+    private static String openRoot="http://szervizserv-tabletek.rhcloud.com/RestP1-1.0-SNAPSHOT/webresources/generic/json";
+
+    private static RestAdapter restAdapter;
 
     static {
         setupRestClient();
@@ -31,7 +33,7 @@ public class HelloRestClient {
                 .setClient(new OkClient(new OkHttpClient()))
                 .setLogLevel(RestAdapter.LogLevel.FULL);
 
-        RestAdapter restAdapter = builder.build();
+        restAdapter = builder.build();
         HELLO_REST_CLIENT = restAdapter.create(HelloAPI.class);
     }
 }

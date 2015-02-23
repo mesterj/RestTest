@@ -5,17 +5,17 @@ package util.kite.mester.com.resttest;
  */
 public class HelloResponse {
 
-    public String greeting;
+    public String nev;
 
     public HelloResponse() {
 
     }
 
-    public String getGreeting() {
-        return greeting;
+    public String getNev() {
+        return nev;
     }
 
-    public void setGreeting(String greeting) {
-        this.greeting = greeting;
+    public void setNev(String nev) {
+        this.nev = nev;
     }
 }

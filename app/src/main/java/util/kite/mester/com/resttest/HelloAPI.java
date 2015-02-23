@@ -16,6 +16,6 @@ public interface HelloAPI {
 
 
     @GET("/{name}")
-    Greeting getGreeting(@Path("name") String Name,
+    void getGreeting(@Path("name") String nev,
                     Callback<HelloResponse> callback);
 }
